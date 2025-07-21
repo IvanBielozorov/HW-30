@@ -1,15 +1,46 @@
 * {
     box-sizing: border-box;
 }
+body {
+    background-color: rgba(128, 128, 128, 0.05);
+}
 .wrapper {
+    position: relative;
     width: 600px;
     height: 600px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 100px;
+    background-color: white;
+    margin-top: 50px;
 }
 .square {
+    top: 20px;
+    left: 20px;
+    position: absolute;
     width: 100px;
     height: 100px;
     background-color: red;
+    animation: square-circle 4000ms infinite;
+}
+
+@keyframes square-circle {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, 460px);
+    background-color: blue;
+  }
+  50% {
+    transform: translate(460px, 460px);
+    background-color: green;
+  }
+  75% {
+    transform: translate(460px, 0);
+    background-color: yellow;
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
